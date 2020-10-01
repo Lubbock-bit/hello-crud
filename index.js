@@ -22,11 +22,6 @@ mongoose
 
 // todo el middleware aca abajo y antes del listen
 
-// listen
-app.listen(port, () => {
-  console.log(`Server listening on port ${port}`)
-});
-
 // index.js
 
 // middlewares (antes del listen)
@@ -52,4 +47,10 @@ app.use((err, req, res, next) => {
   res.status(err.status || 500);
   // para mas detalles usar: console.error(err.stack)
   res.json({ error: err.message });
+});
+
+
+// listen
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`)
 });
