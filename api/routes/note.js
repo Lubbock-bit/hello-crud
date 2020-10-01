@@ -1,8 +1,3 @@
-app.use(express.json());
-app.use(cors());
-app.use(morgan('dev'));
-app.use('/api', require('./api/routes/note'));
-
 const express = require('express');
 const router = express.Router();
 

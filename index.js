@@ -30,7 +30,6 @@ mongoose
 // (solo para el 4to middleware en este caso)
 app.use(express.json());                        // 1er middleware
 app.use(cors());                                // 2do middleware
-app.use(morgan('dev'));                         // 3er middleware
 app.use('/api', require('./api/routes/note'));  // 4to middleware
 // si el cliente NO hace una peticion a algun endpoint de la API
 // entonces usamos una ruta que devuelva un status code 404
